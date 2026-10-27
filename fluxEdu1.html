@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    nav{
+
+background-color: rgb(12, 57, 12);
+height: 10vh;
+width:100vw;
+
+}
+
+
+
+.menu ul{
+
+display:flex;
+justify-content:space-evenly;
+
+}
+
+.menu li {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+
+.dropdown-menu{
+    position: absolute;
+        box-shadow: 0 0 2px black;
+        display: none;
+        height: 20vh;
+        width: 5vw;
+        
+    }
+
+.dropdown-menu a{
+
+color: black;
+
+
+}
+
+
+
+    .dropdown-menu a:hover{
+
+        color: blue;
+    background: whitesmoke;
+    box-shadow: 1px 1px 1px whitesmoke;
+
+
+    }
+
+    .dropdown:hover .dropdown-menu{
+    
+    display: block;
+ }
+
+
+
+
+#linha{
+
+margin-top: 600px;
+
+
+}
+
+
+#texto{
+    color: black;
+    font-size: 30px;
+    padding-top: 70px;
+    
+}
+
+.texto{
+    margin-left: 35px;  
+    
+  }
+
+p{
+padding-bottom: 20px;
+
+
+}
+
+#ft{
+
+width: 40vw;
+height: 80vh;
+margin-left: 900px;
+
+}
+
+#estilo{
+
+margin-right: 1000px;
+
+}
+
+
+
+
+
+
+
+
+
+.dor{
+    display: grid;
+    grid-template-columns:900px 1000px;
+    grid-template-rows: 200px;
+    
+}
+
+
+
+
+#imagem-fundo{
+margin-right: 500px;
+    width: 63%;
+    height: 80vh;
+    object-fit: cover;
+    border-bottom-left-radius: 500px;
+margin-top: 20px;
+
+    
+
+
+}
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    width: 100vw;
+    background-color: rgb(15, 55, 15);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    }
+    
+    .lado2 ul{
+        color:white;
+        display: flex;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+
+    .lado2 ul:hover{
+        opacity: 1;
+    }
+
+    
+    .lado2 li{
+        list-style: none;
+        padding: 20px;
+        text-decoration: none;
+        color:white;
+    }
+
+    .lado2 a{
+
+color: blue;
+
+    }
+    
+    .lado1{
+        color:white;
+        
+    }
+
+    .lado3 li{
+
+padding-top: 5px;
+
+
+    }
+
+
+    .float-card{position:absolute;
+        right:0;
+        bottom:120px;
+        z-index:2;display:flex;
+        align-items:center;
+        gap:12px;
+        background:white;
+        border:1px solid var(--line);
+        border-radius:13px;
+        padding:13px 16px;
+        margin-right: 20px;
+        box-shadow:2px 2px  black;
+        color:black;
+        font-weight:900}
+        .float-card b,.float-card small{display:block}
+        .float-card b{font-size:12px;color:var(--ink)}
+        .float-card small{font-size:10px;color:var(--muted);font-weight:500}
+
+    
+</style>
+
+</head>
+<body>
+   
+    <nav class="exercicios">
+
+        <div class="menu">
+        
+           <ul>
+               <li><a href="#">Inicio</a></li>
+        
+               <li class="dropdown">
+                   <a href="#">Escolas</a>
+        
+                   <div class="dropdown-menu">
+                       <a href="#" id="espaco">Escolas1</a>
+                       <a href="#" id="espaco">Escolas2</a>
+                       <a href="#" id="espaco">Escolas3</a>
+                       <a href="#" id="espaco">Escolas4</a>
+                       <a href="#" id="espaco">Escolas5</a>
+                       <a href="#" id="espaco">Escolas6</a>
+                       <a href="#" id="espaco">Escolas7</a>
+                       <a href="#" id="espaco">Escolas8</a>
+                   
+                   </div>
+                   
+               </li>
+              
+               
+        
+        
+               <li><a href="#">Servicos</a></li>
+               <li><a href="sobrenos.html">Sobre nos</a></li>
+               <li><a href="fluxEdu2.html">Cadastrar</a></li>
+           </ul>
+        
+        </div>
+        
+        </nav> 
+
+    
+
+
+
+
+
+<div class="dor">
+
+<div class="texto">
+
+<h1 id="texto">Habilitar soluções de pagamentos online para escolas</h1>
+<p>O <strong>FluxEdu </strong>é um sistema otimizado que conecta todas as unidades <br>da sua rede educacional em uma única plataforma. <br> Facilitando pagamentos e incricoes,de maneira rapida  e eficiente.
+</p>
+
+
+<h2>Funcionalidades</h2>
+    <ul class="lado3">
+<li>Cadastro de alunos;</li>
+<li>Associação do aluno ao encarregado de educação;</li>
+<li>Histórico financeiro individual;</li>
+<li>Consulta de pagamentos e dívidas;</li>
+<li>Carteiras móveis;</li>
+<li>Envio e emissão de recibos por e-mail/SMS.</li>
+
+    </ul>
+
+</div>
+
+
+
+
+<div class="hero">
+
+
+    <img src="moldura.png" alt="" id="imagem-fundo" >
+
+    <div class="float-card">✓ <span><b>Gestão num só lugar</b><small>Alunos e pagamentos</small></span></div>
+
+</div>
+
+
+
+</div>
+
+
+    </div>
+
+    <footer>
+        <div class="lado1">
+            <address>©2026 FluxEdu.Todos direitos reservados.</address>
+        </div>
+        <div class="lado2">
+            <ul>
+        <li>Redes sociais: <a href="Facebook">Facebook</a>
+        </li>
+        <li><a href="Whatsapp">Whatsapp</a></li>
+        <li><a href="Instagram">Instagram</a></li>
+        
+            </ul>
+        </div>
+        </footer>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

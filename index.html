@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+
+display: grid;
+grid-template-columns:200px ;
+grid-template-rows: 100px 100px;
+text-align: center;
+align-items: center;
+padding: 20px;
+gap: 10px;
+margin-top: 200px;
+row-gap: 140px;
+margin-left: 200px;
+
+
+}
+
+img{
+
+width: 70vw;  
+height: 100vh;
+
+}
+
+h1{
+color:green;
+margin-left: 400px;
+font-size:70px;
+
+
+}
+
+a{
+text-decoration: none;
+color: green;
+}
+
+/* Ajustes responsivos: preservam o estilo original em ecrãs grandes */
+@media (max-width: 900px) {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        margin: 40px auto 0;
+        padding: 20px;
+        gap: 18px;
+    }
+
+    img {
+        display: block;
+        width: min(80vw, 420px);
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    h1, #fluxEdu {
+        margin: 0;
+        font-size: clamp(2rem, 6vw, 3.125rem);
+        text-align: center;
+    }
+
+   
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 24px;
+        padding: 14px;
+        gap: 14px;
+    }
+
+    img {
+        width: min(75vw, 320px);
+    }
+
+    .botoes {
+        gap: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <img src="imagem.png" alt="">
+        <h1 id="fluxedu"><a href="fluxEdu.html">FluxEdu</a></h1>
+</div>
+
+
+
+</body>
+</html>

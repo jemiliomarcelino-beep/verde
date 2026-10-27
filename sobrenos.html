@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+nav{
+
+background-color: rgb(12, 57, 12);
+height: 10vh;
+width:100vw;
+
+}
+
+
+
+.menu ul{
+
+display:flex;
+justify-content:space-evenly;
+
+}
+
+.menu li {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+
+.dropdown-menu{
+    position: absolute;
+        box-shadow: 0 0 2px black;
+        display: none;
+        height: 20vh;
+        width: 5vw;
+        
+    }
+
+.dropdown-menu a{
+
+color: black;
+
+
+}
+
+
+
+    .dropdown-menu a:hover{
+
+        color: blue;
+    background: whitesmoke;
+    box-shadow: 1px 1px 1px whitesmoke;
+
+
+    }
+
+    .dropdown:hover .dropdown-menu{
+    
+    display: block;
+ }
+
+
+
+
+
+
+ footer{
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    width: 100vw;
+    background-color: rgb(15, 55, 15);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    }
+    
+    .lado2 ul{
+        color:white;
+        display: flex;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+
+    .lado2 ul:hover{
+        opacity: 1;
+    }
+
+    
+    .lado2 li{
+        list-style: none;
+        padding: 20px;
+        text-decoration: none;
+        color:white;
+    }
+
+    .lado2 a{
+
+color: blue;
+
+    }
+    
+    .lado1{
+        color:white;
+        
+    }
+
+    .lado3 li{
+
+padding-top: 5px;
+
+
+    }
+
+
+
+
+    
+
+    /* Ajustes responsivos: preservam o estilo original em ecrãs grandes */
+@media (max-width: 900px) {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        margin: 40px auto 0;
+        padding: 20px;
+        gap: 18px;
+    }
+
+    img {
+        display: block;
+        width: min(80vw, 420px);
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    h1, #fluxEdu {
+        margin: 0;
+        font-size: clamp(2rem, 6vw, 3.125rem);
+        text-align: center;
+    }
+
+    .botoes {
+        width: 100%;
+        max-width: 360px;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto;
+        margin: 0 auto;
+        padding: 10px 0;
+        gap: 12px;
+    }
+
+    .btn, .btn1 {
+        width: 100%;
+        min-height: 44px;
+        height: auto;
+        padding: 10px 18px;
+    }
+
+    .botoes p {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 24px;
+        padding: 14px;
+        gap: 14px;
+    }
+
+    img {
+        width: min(75vw, 320px);
+    }
+
+    .botoes {
+        gap: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+    <div class="container"></div>
+
+    <nav class="exercicios">
+
+        <div class="menu">
+        
+           <ul>
+               <li><a href="fluxEdu1.html">Inicio</a></li>
+        
+               <li class="dropdown">
+                   <a href="#">Escolas</a>
+        
+                   <div class="dropdown-menu">
+                       <a href="#" id="espaco">Escolas1</a>
+                       <a href="#" id="espaco">Escolas2</a>
+                       <a href="#" id="espaco">Escolas3</a>
+                       <a href="#" id="espaco">Escolas4</a>
+                       <a href="#" id="espaco">Escolas5</a>
+                       <a href="#" id="espaco">Escolas6</a>
+                       <a href="#" id="espaco">Escolas7</a>
+                       <a href="#" id="espaco">Escolas8</a>
+                   
+                   </div>
+                   
+               </li>
+              
+               
+        
+        
+               <li><a href="#">Servicos</a></li>
+               <li><a href="sobrenos.html">Sobre nos</a></li>
+               <li><a href="flexEdu2.html">Cadastrar</a></li>
+           </ul>
+        
+        </div>
+        
+        </nav> 
+
+<div class="formulario">
+    <h1>Sobre nos</h1>
+
+    <h3>Simplificamos a gestão escolar</h3>
+
+    <p>Somos uma plataforma digital desenvolvida para tornar a gestão escolar mais <br>
+         simples, rápida, segura e organizada. O nosso objetivo é facilitar os processos de
+         <br> cadastro de estudantes, gestão de informações académicas e controlo de <br>
+         pagamentos escolares, proporcionando uma experiência prática para as escolas, os <br>
+          estudantes e os seus encarregados de educação.</p>
+
+          <h3>A nossa missão</h3>
+
+<p>Ser uma plataforma de referência na transformação digital das instituições de <br>
+    ensino, promovendo uma educação mais organizada, transparente e acessível <br>
+     através da tecnologia.</p>
+
+<h3>Os nossos valores</h3>
+
+<ul>
+<li><strong>Segurança</strong>: proteger as informações dos estudantes e os seus dados de cadastro.</li>
+<br>
+<li><strong>Transparência</strong>:facilitar o acompanhamento e a consulta dos pagamentos escolares.</li>
+<br>
+<li><strong>Eficiência</strong>:reduzir o tempo gasto em tarefas administrativas.</li>
+<br>
+<li><strong>Inovação</strong>: utilizar a tecnologia para melhorar a gestão das instituições de ensino.</li>
+<br>
+<li><strong>Acessibilidade</strong>:proporcionar uma plataforma intuitiva e fácil de utilizar.</li>
+
+
+
+
+</ul>
+
+
+
+<h3>O que oferecemos?</h3>
+
+<ul>
+<li>Cadastro e gestão de estudantes. </li>
+<br>
+<li>Registo e atualização de informações pessoais e académicas.</li>
+<br>
+<li>Gestão e acompanhamento de propinas e outras taxas escolares.</li>
+<br>
+<li>Consulta do histórico e do estado dos pagamentos.</li>
+<br>
+<li>Organização das informações escolares numa única plataforma.</li>
+
+</ul>
+
+<p><strong>A nossa prioridade é tornar a gestão escolar mais eficiente, aproximando a <br>
+     tecnologia das necessidades reais das instituições de ensino.</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<footer>
+    <div class="lado1">
+        <address>©2026 FluxEdu.Todos direitos reservados.</address>
+    </div>
+    <div class="lado2">
+        <ul>
+    <li>Redes sociais: <a href="Facebook">Facebook</a>
+    </li>
+    <li><a href="Whatsapp">Whatsapp</a></li>
+    <li><a href="Instagram">Instagram</a></li>
+    
+        </ul>
+    </div>
+    </footer>
+
+</div>
+    
+</body>
+</html>

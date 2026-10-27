@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <aside class="sidebar">
+    <h2>🎓 FluxEdu</h2>
+    <p class="subtitle">Gestão escolar</p>
+
+    <nav>
+      <button class="active" data-page="dashboard">🏠 Painel principal</button>
+      <button data-page="alunos">👨‍🎓 Alunos</button>
+      <button data-page="pagamentos">💳 Pagamentos</button>
+      <button data-page="relatorios">📊 Relatórios</button>
+    </nav>
+
+    <div class="sidebar-footer">FluxEdu © 2026</div>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <h1 id="page-title">Dashboard</h1>
+        <p>Bem-vindo ao painel de gestão escolar.</p>
+      </div>
+      <span class="admin">Administrador</span>
+    </header>
+
+    <section id="dashboard" class="page">
+      <div class="cards">
+        <article class="card">
+          <p>Total de alunos</p>
+          <h2 id="total-alunos">0</h2>
+        </article>
+        <article class="card">
+          <p>Receitas registadas</p>
+          <h2 id="total-receitas">0 MT</h2>
+        </article>
+        <article class="card">
+          <p>Pagamentos pendentes</p>
+          <h2 id="total-pendentes">0</h2>
+        </article>
+      </div>
+
+      <div class="panel">
+        <h3>Atividade recente</h3>
+        <div id="atividade">Ainda não existem registos.</div>
+      </div>
+    </section>
+
+    <section id="alunos" class="page hidden">
+      <div class="panel">
+        <h3>Registar aluno</h3>
+        <form id="form-aluno">
+          <input id="nome" placeholder="Nome completo do aluno" required>
+          <input id="encarregado" placeholder="Nome do encarregado" required>
+          <input id="mensalidade" type="number" min="0"
+            step="0.01" placeholder="Mensalidade em MT" required>
+          <button class="primary" type="submit">Adicionar aluno</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>Lista de alunos</h3>
+        <input id="pesquisa" placeholder="Pesquisar aluno...">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Aluno</th>
+                <th>Encarregado</th>
+                <th>Mensalidade</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="lista-alunos"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="pagamentos" class="page hidden">
+      <div class="panel">
+        <h3>Registar pagamento</h3>
+        <form id="form-pagamento">
+          <select id="aluno-pagamento" required>
+            <option value="">Selecionar aluno</option>
+          </select>
+          <input id="valor-pagamento" type="number" min="0.01"
+            step="0.01" placeholder="Valor em MT" required>
+          <select id="mes-pagamento" required>
+            <option value="">Selecionar mês</option>
+            <option>Janeiro</option><option>Fevereiro</option>
+            <option>Março</option><option>Abril</option>
+            <option>Maio</option><option>Junho</option>
+            <option>Julho</option><option>Agosto</option>
+            <option>Setembro</option><option>Outubro</option>
+            <option>Novembro</option><option>Dezembro</option>
+          </select>
+          <button class="primary" type="submit">Confirmar pagamento</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>Histórico de pagamentos</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Aluno</th><th>Mês</th>
+                <th>Valor</th><th>Data</th>
+              </tr>
+            </thead>
+            <tbody id="lista-pagamentos"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="relatorios" class="page hidden">
+      <div class="panel">
+        <h3>Relatório financeiro</h3>
+        <p>Total recebido:</p>
+        <h2 id="relatorio-receitas">0 MT</h2>
+        <p>Pagamentos registados: <strong id="relatorio-contagem">0</strong></p>
+        <button class="primary" id="exportar">Exportar relatório CSV</button>
+      </div>
+    </section>
+  </main>
+
+  
+  <script src="script1.js"></script>
+
+
+</body>
+</html>
